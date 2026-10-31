@@ -1,33 +1,24 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { LanguageProvider } from "./context/LanguageContext";
-import Welcome from "./pages/Welcome";
-import Menu from "./pages/Menu";
-import Cart from "./pages/Cart";
-import OrderTracking from "./pages/OrderTracking";
-import MyOrders from "./pages/MyOrders";
-import Bookings from "./pages/Bookings";
-import TablesAvailability from "./pages/TablesAvailability"
-import BookingDetails from "./pages/BookingDetails";
-import BookingTracking from "./pages/BookingTracking";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { MotionConfig } from "framer-motion";
+import HomePage from "./pages/HomePage";
+import DiscoveryPage from "./pages/DiscoveryPage";
+
 function App() {
   return (
-    <LanguageProvider>
-      <Router>
+    <MotionConfig reducedMotion="user">
+      <BrowserRouter
+        future={{
+          v7_startTransition: true,
+          v7_relativeSplatPath: true,
+        }}
+      >
         <Routes>
-          {/* Customer */}
-          <Route path="/" element={<Welcome />} />
-          <Route path="/menu" element={<Menu />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/tracking" element={<OrderTracking />} />
-          <Route path="/myorders" element={<MyOrders />} />
-          <Route path="/bookings" element={<Bookings />} />
-          <Route path="/bookings/tables" element={<TablesAvailability />} />
-          <Route path="/bookings/details" element={<BookingDetails />} />
-          <Route path="/bookings/tracking" element={<BookingTracking />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/discovery" element={<DiscoveryPage />} />
+          <Route path="*" element={<HomePage />} />
         </Routes>
-      </Router>
-    </LanguageProvider>
+      </BrowserRouter>
+    </MotionConfig>
   );
 }
 

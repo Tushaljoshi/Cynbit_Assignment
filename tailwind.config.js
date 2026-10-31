@@ -8,21 +8,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Cafe Brand Colors
-        cream: "#FAF6EE",          // Main background
-        espresso: "#3D2314",       // Main text / headings
-        caramel: "#A35D38",        // Primary CTA / active states
-        caramelHover: "#8F4F30",   // Darker caramel for hover
-        latte: "#EAD8C0",          // Cards / inputs / surfaces
-        terracotta: "#C86D46",     // Badges / highlights / favorites
-
-        // Optional semantic colors
-        success: "#5F7654",
-        warning: "#B7793E",
-        error: "#A64B3C",
-
-        // Neutral colors
-        white: "#FFFFFF",
+        brand: {
+          ink: "#152021",
+          teal: "#00686B",
+          tealDark: "#005456",
+          paper: "#F6F9F8",
+          mint: "#EAF3F1",
+          peach: "#FFF1D9",
+          line: "#DFE9E7",
+          muted: "#687674",
+          white: "#FFFFFF",
+        },
       },
     },
   },
