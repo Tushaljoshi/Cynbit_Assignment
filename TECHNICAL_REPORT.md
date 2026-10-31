@@ -1,8 +1,5 @@
 # Cynbit Website Improvement — Technical Report
 
-**Project:** Cynbit Technologies website prototype  
-**Report date:** 31 October 2026  
-**Reviewed website:** [https://www.cynbit.in/](https://www.cynbit.in/)
 
 ## 1. Problem statement
 
